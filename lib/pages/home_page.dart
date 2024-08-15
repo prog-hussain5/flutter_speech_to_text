@@ -9,8 +9,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final SpeechToText _speechToText = SpeechToText();
 
+  final SpeechToText _speechToText = SpeechToText();
   bool _speechEnabled = false;
   String _wordsSpoken = "";
   double _confidenceLevel = 0;
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.purple,
         title: const Text(
           'Speech Demo',
           style: TextStyle(
@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _speechToText.isListening ? _stopListening : _startListening,
         tooltip: 'Listen',
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.purple,
         child: Icon(
           _speechToText.isNotListening ? Icons.mic_off : Icons.mic,
           color: Colors.white,
